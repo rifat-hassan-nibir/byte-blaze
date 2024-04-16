@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
@@ -8,33 +10,33 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </div>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li className="font-bold">
-              <a>Home</a>
-            </li>
-            <li className="font-bold">
-              <a>Blogs</a>
-            </li>
-            <li className="font-bold">
-              <a>Bookmarks</a>
-            </li>
+          <ul tabIndex={0} className="space-y-3 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <NavLink to="/" className="font-bold">
+              Home
+            </NavLink>
+            <NavLink to="/blogs" className="font-bold">
+              Blogs
+            </NavLink>
+            <NavLink to="/bookmarks" className="font-bold">
+              Bookmarks
+            </NavLink>
           </ul>
         </div>
-        <a className="btn btn-ghost text-2xl text-secondary gap-0 normal-case font-bold">
+        <Link to="/" className="btn btn-ghost text-2xl text-secondary gap-0 normal-case font-bold">
           Byte<span className="text-primary">Blaze</span>
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a className="font-bold">Home</a>
-          </li>
-          <li>
-            <a className="font-bold">Blogs</a>
-          </li>
-          <li>
-            <a className="font-bold">Bookmarks</a>
-          </li>
+        <ul className="flex items-center gap-7 menu menu-horizontal px-1">
+          <NavLink to="/" className="font-bold">
+            Home
+          </NavLink>
+          <NavLink to="/blogs" className="font-bold">
+            Blogs
+          </NavLink>
+          <NavLink to="/bookmarks" className="font-bold">
+            Bookmarks
+          </NavLink>
         </ul>
       </div>
       <div className="navbar-end">
