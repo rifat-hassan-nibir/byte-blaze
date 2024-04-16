@@ -10,14 +10,14 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </div>
-          <ul tabIndex={0} className="space-y-3 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <NavLink to="/" className="font-bold">
+          <ul tabIndex={0} className="space-y-3 menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-52">
+            <NavLink to="/" className={({ isActive }) => (isActive ? "text-primary font-bold" : "font-bold")}>
               Home
             </NavLink>
-            <NavLink to="/blogs" className="font-bold">
+            <NavLink to="/blogs" className={({ isActive }) => (isActive ? "text-primary font-bold" : "font-bold")}>
               Blogs
             </NavLink>
-            <NavLink to="/bookmarks" className="font-bold">
+            <NavLink to="/bookmarks" className={({ isActive }) => (isActive ? "text-primary font-bold" : "font-bold")}>
               Bookmarks
             </NavLink>
           </ul>
@@ -28,13 +28,13 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="flex items-center gap-7 menu menu-horizontal px-1">
-          <NavLink to="/" className="font-bold">
+          <NavLink to="/" className={({ isActive }) => (isActive ? "text-primary font-bold" : "font-bold")}>
             Home
           </NavLink>
-          <NavLink to="/blogs" className="font-bold">
+          <NavLink to="/blogs" className={({ isActive }) => (isActive ? "text-primary font-bold" : "font-bold")}>
             Blogs
           </NavLink>
-          <NavLink to="/bookmarks" className="font-bold">
+          <NavLink to="/bookmarks" className={({ isActive }) => (isActive ? "text-primary font-bold" : "font-bold")}>
             Bookmarks
           </NavLink>
         </ul>
