@@ -25,6 +25,10 @@ const router = createBrowserRouter([
         path: "/bookmarks",
         element: <Bookmarks></Bookmarks>,
       },
+      {
+        path: "/read-blogs",
+        element: <Blogs></Blogs>,
+      },
     ],
   },
 ]);
