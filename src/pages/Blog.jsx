@@ -72,28 +72,6 @@ const Blog = () => {
         {/* Nested Routes */}
         <Outlet></Outlet>
       </article>
-      <div>
-        <div className="space-y-2">
-          <h4 className="text-lg font-semibold">Related posts</h4>
-          <ul className="ml-4 space-y-1 list-disc">
-            <li>
-              <a rel="noopener noreferrer" href="#" className="hover:underline">
-                Nunc id magna mollis
-              </a>
-            </li>
-            <li>
-              <a rel="noopener noreferrer" href="#" className="hover:underline">
-                Duis molestie, neque eget pretium lobortis
-              </a>
-            </li>
-            <li>
-              <a rel="noopener noreferrer" href="#" className="hover:underline">
-                Mauris nec urna volutpat, aliquam lectus sit amet
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
   );
 };
