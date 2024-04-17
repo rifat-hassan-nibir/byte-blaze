@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, Outlet, useLoaderData } from "react-router-dom";
 
 const Blog = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -47,7 +47,7 @@ const Blog = () => {
             <span>Content</span>
           </Link>
           <Link
-            // to={`author`}
+            to="author"
             onClick={() => setTabIndex(1)}
             className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
               tabIndex === 1 ? "border border-b-0" : "border-b"
@@ -69,6 +69,8 @@ const Blog = () => {
             <span>Author</span>
           </Link>
         </div>
+        {/* Nested Routes */}
+        <Outlet></Outlet>
       </article>
       <div>
         <div className="flex flex-wrap py-6 gap-2 border-t border-dashed dark:border-gray-600">
