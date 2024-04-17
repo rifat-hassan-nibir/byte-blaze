@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
 import Bookmarks from "./pages/Bookmarks";
 import MainLayout from "./layout/MainLayout";
+import Blog from "./components/Blog";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
       {
         path: "/read-blogs",
         element: <Blogs></Blogs>,
+      },
+      {
+        path: "/blog/:id",
+        element: <Blog></Blog>,
+        loader: ({ params }) => fetch(`https://dev.to/api/articles/${params.id}`),
       },
     ],
   },
