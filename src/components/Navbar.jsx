@@ -17,9 +17,6 @@ const Navbar = () => {
             <NavLink to="/blogs" className={({ isActive }) => (isActive ? "text-primary font-bold" : "font-bold")}>
               Blogs
             </NavLink>
-            <NavLink to="/bookmarks" className={({ isActive }) => (isActive ? "text-primary font-bold" : "font-bold")}>
-              Bookmarks
-            </NavLink>
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-2xl text-secondary gap-0 normal-case font-bold">
@@ -33,9 +30,6 @@ const Navbar = () => {
           </NavLink>
           <NavLink to="/blogs" className={({ isActive }) => (isActive ? "text-primary font-bold" : "font-bold")}>
             Blogs
-          </NavLink>
-          <NavLink to="/bookmarks" className={({ isActive }) => (isActive ? "text-primary font-bold" : "font-bold")}>
-            Bookmarks
           </NavLink>
         </ul>
       </div>
